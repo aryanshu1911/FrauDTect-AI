@@ -20,7 +20,7 @@ FrauDTect is a real-time scam detection tool designed to analyze text, URLs, and
 
 ## Status
 🚧 **Work in Progress**  
-This project is currently under active development. New features and improvements are still being added!
+This project is currently under active development. New features and improvements are still being added. Stay tuned for further updates!
 
 ## Usage
 *(Instructions to run or test the tool will be added soon)*
