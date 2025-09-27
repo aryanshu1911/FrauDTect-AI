@@ -26,4 +26,4 @@ This project is currently under active development. New features and improvement
 *(Instructions to run or test the tool will be added soon)*
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
