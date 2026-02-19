@@ -85,7 +85,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
---
+---
 
 ## 🔐 Environment Variables
 
@@ -94,7 +94,7 @@ Create a .env file in the root directory:
 - VT_API_Key=your_virustotal_api_key
 - URLSCAN_API_Key=your_urlscan_api_key
 
---
+---
 
 ## 📈 Current Model Performance
 
@@ -105,7 +105,7 @@ Create a .env file in the root directory:
 
 Note: Performance depends on training data distribution.
 
---
+---
 
 ## 🎯 Use Cases
 
@@ -116,7 +116,7 @@ Note: Performance depends on training data distribution.
 - Cybersecurity research demos
 - AI explainability demonstrations
 
---
+---
 
 ## ⚠️ Disclaimer
 
