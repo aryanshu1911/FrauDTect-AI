@@ -85,6 +85,8 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+---
+
 ## 🔐 Environment Variables
 
 Create a .env file in the root directory:
@@ -101,6 +103,8 @@ Create a .env file in the root directory:
 
 Note: Performance depends on training data distribution.
 
+---
+
 ## 🎯 Use Cases
 
 - Scam message detection
@@ -109,6 +113,8 @@ Note: Performance depends on training data distribution.
 - Suspicious domain evaluation
 - Cybersecurity research demos
 - AI explainability demonstrations
+
+---
 
 ## ⚠️ Disclaimer
 
