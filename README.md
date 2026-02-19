@@ -52,30 +52,6 @@ This ensures:
 
 ---
 
-## 🏗️ Project Structure
-
-FrauDTect-AI/
-│
-├── core/
-│ ├── scam_detection.py
-│ ├── detection_model.py
-│ ├── explainability.py
-│ ├── keywords.py
-│ ├── url_analysis.py
-│ ├── ocr_engine.py
-│ └── logger.py
-│
-├── models/
-│ ├── scam_model.pkl
-│ └── vectorizer.pkl
-│
-├── app.py
-├── requirements.txt
-└── .gitignore
-
-
----
-
 ## 🛠️ Technologies Used
 
 - Python  
