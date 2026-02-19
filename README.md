@@ -75,16 +75,17 @@ git clone https://github.com/aryanshu1911/FrauDTect-AI.git
 cd FrauDTect-AI
 ```
 
-2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
 ```
 pip install -r requirements.txt
 ```
 
-3️⃣ Run Application
+### 3️⃣ Run Application
 ```
 streamlit run app.py
 ```
 
+--
 
 ## 🔐 Environment Variables
 
@@ -93,6 +94,7 @@ Create a .env file in the root directory:
 - VT_API_Key=your_virustotal_api_key
 - URLSCAN_API_Key=your_urlscan_api_key
 
+--
 
 ## 📈 Current Model Performance
 
@@ -103,6 +105,7 @@ Create a .env file in the root directory:
 
 Note: Performance depends on training data distribution.
 
+--
 
 ## 🎯 Use Cases
 
@@ -113,6 +116,7 @@ Note: Performance depends on training data distribution.
 - Cybersecurity research demos
 - AI explainability demonstrations
 
+--
 
 ## ⚠️ Disclaimer
 
