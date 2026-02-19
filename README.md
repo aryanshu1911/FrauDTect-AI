@@ -92,14 +92,14 @@ cd FrauDTect-AI
 3️⃣ Run Application
 ```streamlit run app.py```
 
-🔐 Environment Variables
+## 🔐 Environment Variables
 
 Create a .env file in the root directory:
 
-VT_API_Key=your_virustotal_api_key
-URLSCAN_API_Key=your_urlscan_api_key
+- VT_API_Key=your_virustotal_api_key
+- URLSCAN_API_Key=your_urlscan_api_key
 
-📈 Current Model Performance
+## 📈 Current Model Performance
 
 - Accuracy: ~99%
 - Balanced dataset training
@@ -108,7 +108,7 @@ URLSCAN_API_Key=your_urlscan_api_key
 
 Note: Performance depends on training data distribution.
 
-🎯 Use Cases
+## 🎯 Use Cases
 
 - Scam message detection
 - Crypto fraud identification
@@ -117,7 +117,7 @@ Note: Performance depends on training data distribution.
 - Cybersecurity research demos
 - AI explainability demonstrations
 
-⚠️ Disclaimer
+## ⚠️ Disclaimer
 
 This tool is built for educational and research purposes.
 It does not guarantee 100% fraud detection accuracy.
