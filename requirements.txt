@@ -10,4 +10,3 @@ tldextract==4.5.1             # Domain extraction for URL analysis
 whois==0.9.27                 # WHOIS lookup for domain intelligence
 python-dotenv==1.0.0          # Environment variable management
 joblib==1.4.2                 # Model saving/loading
-shap
