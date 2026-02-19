@@ -84,12 +84,13 @@ This ensures:
 ```bash
 git clone https://github.com/aryanshu1911/FrauDTect-AI.git
 cd FrauDTect-AI
+```
 
 2️⃣ Install Dependencies
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 3️⃣ Run Application
-streamlit run app.py
+```streamlit run app.py```
 
 🔐 Environment Variables
 
@@ -100,29 +101,21 @@ URLSCAN_API_Key=your_urlscan_api_key
 
 📈 Current Model Performance
 
-Accuracy: ~99%
-
-Balanced dataset training
-
-Calibrated Logistic Regression
-
-TF-IDF (1–3 n-grams, max 20,000 features)
+- Accuracy: ~99%
+- Balanced dataset training
+- Calibrated Logistic Regression
+- TF-IDF (1–3 n-grams, max 20,000 features)
 
 Note: Performance depends on training data distribution.
 
 🎯 Use Cases
 
-Scam message detection
-
-Crypto fraud identification
-
-Phishing detection
-
-Suspicious domain evaluation
-
-Cybersecurity research demos
-
-AI explainability demonstrations
+- Scam message detection
+- Crypto fraud identification
+- Phishing detection
+- Suspicious domain evaluation
+- Cybersecurity research demos
+- AI explainability demonstrations
 
 ⚠️ Disclaimer
 
