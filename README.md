@@ -195,7 +195,3 @@ URLSCAN_API_Key=your_urlscan_api_key
 This project is open-source under the MIT License.
 
 ---
-
-<p align="center">
-  <strong>🛡️ FrauDTect AI</strong> — Intelligent scam detection, powered by hybrid AI.
-</p>
