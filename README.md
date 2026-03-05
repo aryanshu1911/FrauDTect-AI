@@ -1,4 +1,4 @@
-# 🛡️ FrauDTect
+# 🛡️ FrauDTect AI
 
 **Hybrid AI-Powered Real-Time Scam Detection System**
 
