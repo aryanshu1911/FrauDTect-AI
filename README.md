@@ -1,130 +1,197 @@
-# 🛡️ FrauDTect AI  
-### Hybrid AI-Powered Real-Time Scam Detection System
+# 🛡️ FrauDTect AI
 
-FrauDTect AI is a real-time scam detection platform that analyzes suspicious text, URLs, and screenshots using a hybrid approach combining:
-
-- Rule-based keyword risk scoring
-- Supervised Machine Learning (TF-IDF + Logistic Regression)
-- AI-powered explainability engine
-- OSINT integrations (WHOIS, VirusTotal, URLScan)
-
-Designed for cybersecurity research, fraud detection, and intelligent scam analysis.
+**Hybrid AI-Powered Real-Time Scam Detection System**
 
 ---
 
-## 🚀 Features
+## 📄 Abstract
 
-### 📝 Text & Screenshot Analysis
-- Weighted scam keyword detection
-- TF-IDF + Logistic Regression classifier
-- Hybrid risk scoring engine
-- Confidence score calculation
-- Scam category detection (crypto, bank fraud, urgency, phishing, etc.)
-- Structured AI-generated explanation of verdict
-
-### 🌐 URL Analysis
-- Domain normalization
-- DNS resolution validation
-- Suspicious TLD detection
-- Domain age via WHOIS lookup
-- Optional deep OSINT scan:
-  - VirusTotal API integration
-  - URLScan API integration
-- Risk scoring with explanation
-
-### 📊 Explainability Engine
-- Extracts top influential features from ML model
-- Generates human-readable reasoning summary
-- Combines ML probability + keyword signals
+FrauDTect AI is a hybrid AI-powered real-time scam detection platform that analyzes suspicious text, URLs, and screenshots to identify fraudulent content. The system combines rule-based keyword risk scoring with supervised Machine Learning (TF-IDF + Logistic Regression) and an AI-powered explainability engine to deliver accurate, interpretable verdicts. It integrates OSINT sources including WHOIS lookups, VirusTotal, and URLScan for deep domain analysis. Built with Python and Streamlit, FrauDTect AI provides a clean, interactive interface for cybersecurity research, fraud detection demonstrations, and intelligent scam analysis. It is designed as an academic mini project suitable for demonstration in 5–10 minutes.
 
 ---
 
-## 🧠 Architecture Overview
+## 🧩 Problem Statement
 
-Hybrid Decision Model:
+Online scams are becoming increasingly sophisticated — from phishing emails and crypto fraud to fake banking alerts. Traditional detection methods rely on either static keyword matching (prone to false positives) or pure ML models (lacking interpretability). There is a need for a **hybrid system** that combines statistical robustness with deterministic red-flag detection while providing **human-readable explanations** for its verdicts.
 
-Final Risk Score =
-0.6 × ML Probability + 0.4 × (Keyword Weighted Score × 5)
+---
+
+## 💡 Proposed Solution
+
+FrauDTect AI provides a multi-layered detection approach in a single, interactive platform:
+
+1. **Text & Screenshot Analyzer** — Hybrid ML + rule-based scam detection with confidence scoring
+2. **URL Analyzer** — Domain validation, WHOIS lookup, and optional deep OSINT scanning
+3. **Explainability Engine** — Human-readable reasoning combining ML features and keyword signals
+
+All analysis is designed to be transparent, interpretable, and research-friendly.
+
+---
+
+## 🔍 How the Hybrid Model Works
+
+Instead of relying on a single detection method, FrauDTect AI combines two approaches:
+
+1. **ML Probability** — TF-IDF vectorization + Calibrated Logistic Regression produces a scam probability score
+2. **Keyword Risk Score** — Weighted keyword matching across scam categories (crypto, banking, urgency, phishing)
+3. **Final score is a weighted blend** of both signals
+
+```
+Final Risk Score = 0.6 × ML Probability + 0.4 × (Keyword Weighted Score × 5)
+```
 
 This ensures:
-- Statistical robustness (ML)
-- Deterministic red-flag detection (rules)
-- Reduced false positives
+- **Statistical robustness** from the ML model
+- **Deterministic red-flag detection** from keyword rules
+- **Reduced false positives** through hybrid scoring
 
 ---
 
-## 🏗️ Project Structure
+## 📊 How the Explainability Engine Works
 
+### Feature Extraction
+- Top influential TF-IDF features are extracted from the ML model
+- Matched scam keywords are identified with their categories and weights
 
-This ensures:
-- Statistical robustness (ML)
-- Deterministic red-flag detection (rules)
-- Reduced false positives
+### Reasoning Generation
+- Combines ML probability + keyword signals into a structured explanation
+- Produces a human-readable summary of why content was flagged
+- Displays scam category breakdown (crypto, bank fraud, urgency, phishing, etc.)
 
----
-
-## 🛠️ Technologies Used
-
-- Python
-- Streamlit
-- Scikit-learn
-- TF-IDF Vectorization
-- Logistic Regression (CalibratedClassifierCV)
-- OCR (Pillow / Tesseract compatible)
-- WHOIS Lookup
-- VirusTotal API
-- URLScan API
+This ensures that every verdict is **transparent and auditable**.
 
 ---
 
-## ⚙️ Installation & Setup
+## 🛡️ Security & Analysis Capabilities
 
-### 1️⃣ Clone Repository
+| Capability | Implementation |
+|-----------|---------------|
+| Text Analysis | TF-IDF + Logistic Regression + keyword scoring |
+| Screenshot Analysis | OCR text extraction + hybrid analysis pipeline |
+| URL Validation | DNS resolution + suspicious TLD detection |
+| Domain Intelligence | WHOIS lookup for domain age verification |
+| Deep OSINT | VirusTotal + URLScan API integrations |
+| Explainability | ML feature extraction + structured reasoning |
+
+---
+
+## ⚙️ Tech Stack
+
+| Component | Technology |
+|-----------|-----------|
+| Backend | Python 3.10+ |
+| Frontend | Streamlit |
+| ML Pipeline | Scikit-learn, TF-IDF Vectorization |
+| Classifier | Logistic Regression (CalibratedClassifierCV) |
+| OCR | Pillow / Tesseract compatible |
+| OSINT | WHOIS, VirusTotal API, URLScan API |
+
+---
+
+## 🚀 Setup & Run
+
+### Prerequisites
+
+- Python 3.10 or higher
+- pip
+
+### Installation
 
 ```bash
+# Clone the repository
 git clone https://github.com/aryanshu1911/FrauDTect-AI.git
 cd FrauDTect-AI
 
-2️⃣ Install Dependencies
+# Install dependencies
 pip install -r requirements.txt
 
-3️⃣ Run Application
+# Run the application
 streamlit run app.py
+```
 
-🔐 Environment Variables
+---
 
-Create a .env file in the root directory:
+## 🔐 Environment Variables
 
+Create a `.env` file in the root directory:
+
+```
 VT_API_Key=your_virustotal_api_key
 URLSCAN_API_Key=your_urlscan_api_key
+```
 
-📈 Current Model Performance
+> **Note:** OSINT features (VirusTotal, URLScan) are optional. The app functions without API keys but with limited URL analysis.
 
-Accuracy: ~99%
+---
 
-Balanced dataset training
+## 🧪 Testing
 
-Calibrated Logistic Regression
+### Sample Test Inputs
 
-TF-IDF (1–3 n-grams, max 20,000 features)
+| Input Type | Sample | Expected Result |
+|-----------|--------|-----------------|
+| Scam Text | "Congratulations! You've won $1000. Click here to claim" | High Risk — Urgency + Prize scam |
+| Phishing | "Your bank account has been locked. Verify immediately" | High Risk — Banking fraud |
+| Safe Text | "Meeting scheduled for tomorrow at 3 PM" | Low Risk — No scam indicators |
+| Suspicious URL | `http://free-prizes-now.xyz` | High Risk — Suspicious TLD |
+| Safe URL | `https://google.com` | Low Risk — Established domain |
 
-Note: Performance depends on training data distribution.
+### Edge Cases
 
-🎯 Use Cases
+- Empty input → Graceful error handling
+- Non-English text → Limited detection (English-trained model)
+- Shortened URLs → Domain normalization handles redirects
+- Screenshot with no text → OCR returns empty, low confidence
 
-Scam message detection
+---
 
-Crypto fraud identification
+## 📈 Model Performance
 
-Phishing detection
+| Metric | Value |
+|--------|-------|
+| Accuracy | ~99% |
+| Training | Balanced dataset |
+| Classifier | Calibrated Logistic Regression |
+| Features | TF-IDF (1–3 n-grams, max 20,000) |
 
-Suspicious domain evaluation
+> **Note:** Performance depends on training data distribution and may vary with real-world inputs.
 
-Cybersecurity research demos
+---
 
-AI explainability demonstrations
+## 🎯 Use Cases
 
-⚠️ Disclaimer
+- Scam message detection
+- Crypto fraud identification
+- Phishing detection
+- Suspicious domain evaluation
+- Cybersecurity research demos
+- AI explainability demonstrations
 
-This tool is built for educational and research purposes.
-It does not guarantee 100% fraud detection accuracy.
+---
+
+## ⚠️ Limitations
+
+- English-language scam detection only
+- OCR accuracy depends on image quality
+- OSINT APIs require valid API keys for full functionality
+- ML model accuracy depends on training data distribution
+- No real-time URL crawling or sandbox analysis
+
+---
+
+## 🔮 Future Enhancements
+
+- **Multi-language support** — Expand detection beyond English
+- **Deep learning models** — BERT/transformer-based classification
+- **Real-time URL sandboxing** — Dynamic page analysis
+- **Browser extension** — Real-time scam detection while browsing
+- **Automated retraining pipeline** — Continuous model improvement
+- **User feedback loop** — Community-driven scam reporting
+
+---
+
+## 📜 License
+
+This project is open-source under the MIT License.
+
+---
